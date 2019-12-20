@@ -5,11 +5,15 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class Homework_1 {
+import java.util.concurrent.TimeUnit;
+
+public class Homework_1 extends TestBase{
         WebDriver driver;
         @BeforeMethod
         public void setUp(){
             driver = new ChromeDriver();
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
         }
 
 
